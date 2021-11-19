@@ -42,9 +42,7 @@ class Program {
 			int key = rng.Next()%666;
 			list.AddElement(new Stuff(){thing = 23, otherThing = key}, key);
 		}
-
-		//var sw = new Stopwatch();
-		//sw.ResetStart();
+		
 		list.Commit();
 
 		
@@ -76,7 +74,7 @@ class Program {
 			list.Commit();
 			list.Reset();
 		}
-		sw.StopShowMillis($"Cached radix sort (add, sort, reset), size: {size}, iterations: {its}");
+		sw.StopShowMillis($"Preallocated radix sort (add, sort, reset), size: {size}, iterations: {its}");
 
 		var normalList = new NormalSortedList<Stuff>(size);
 		
@@ -94,6 +92,6 @@ class Program {
 			normalList.Commit();
 			normalList.Reset();
 		}
-		sw.StopShowMillis($"Cached normal sort (add, sort, reset), size: {size}, iterations: {its}");
+		sw.StopShowMillis($"Preallocated normal sort (add, sort, reset), size: {size}, iterations: {its}");
 	}
 }

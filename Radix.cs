@@ -11,6 +11,10 @@ public static class RadixSort {
 		countList = new int[Radix];
 	}
 
+	//Structure for storing the input and output structures
+	//for radix sorts, the indices array can be used to point
+	//to elements in some other array so it can be indexed in
+	//sorted order
 	public struct RadixSortList
 	{
 		public int[] keys;
@@ -99,8 +103,7 @@ public static class RadixSort {
 		list.InputOutputSwap();
 	}
 
-	// The main function to that sorts arr[] of size n using
-	// Radix Sort
+	//Main method to do RadixSort
 	public static void Sort(ref RadixSortList list, int n)
 	{
 		// Find the maximum number to know number of digits

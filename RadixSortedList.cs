@@ -44,13 +44,10 @@ public class RadixSortedList<T>
 	{
 		Array.Clear(elements,0, count);
 		count = 0;
-		//Array.Clear(list, 0, count);
-		//Array.Clear(output, 0, count);
 	}
 
 	public void Commit()
 	{
-		//Do thing
 		RadixSort.Sort(ref list, count);
 
 	}
@@ -95,13 +92,12 @@ public class NormalSortedList<T>
 
 	public void Reset()
 	{
+		Array.Clear(list, 0, count);
 		count = 0;
-		//Array.Clear(list, 0, count);
 	}
 
 	public void Commit()
 	{
-		//Do thing
 		Array.Sort(keys, list, 0, count);	
 	}
 }
