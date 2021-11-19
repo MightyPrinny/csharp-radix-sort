@@ -1,0 +1,1 @@
+Just an experiment based on code found in geeksforgeeks. That version seemed to be a bit too slow and it wasn't even beating Array.Sort with over 1000000 elements where it's supposed be much better, so I changed the code into this and now it performs much better.
